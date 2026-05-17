@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Mesa Dorada | Sistema Multi-Restaurante Profesional</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#f59e0b',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a;
+            color: #f8fafc;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .btn-premium {
+            background-color: #f59e0b;
+            color: #0f172a;
+            padding: 1rem 2rem;
+            border-radius: 9999px;
+            font-weight: 700;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            box-shadow: 0 10px 25px -5px rgba(245, 158, 11, 0.4);
+        }
+
+        .btn-premium:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 20px 25px -5px rgba(245, 158, 11, 0.5);
+            background-color: #fbbf24;
+        }
+
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 1.5rem;
+            padding: 2.5rem;
+            transition: transform 0.3s;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(245, 158, 11, 0.3);
+        }
+    </style>
+</head>
+<body class="relative">
+
+    <!-- Decorative Background -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none z-0">
+        <div class="absolute -top-1/2 -left-1/2 w-full h-full bg-gradient-to-br from-amber-500/20 to-transparent rounded-full blur-[120px]"></div>
+        <div class="absolute top-[20%] -right-[20%] w-[80%] h-[80%] bg-gradient-to-tl from-blue-500/10 to-transparent rounded-full blur-[120px]"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="relative z-10 px-8 py-6 flex items-center justify-between max-w-7xl mx-auto">
+        <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-400 to-amber-600 text-slate-900 flex items-center justify-center shadow-lg shadow-amber-500/30">
+                <i data-lucide="utensils-crossed" class="w-6 h-6"></i>
+            </div>
+            <span class="font-bold text-xl tracking-tight text-white">La Mesa Dorada</span>
+        </div>
+        <div class="flex items-center gap-4">
+            <a href="login.html" class="text-slate-300 hover:text-white font-medium transition-colors">Iniciar Sesión</a>
+            <a href="register.html" class="px-5 py-2.5 rounded-full bg-white/10 hover:bg-white/20 text-white font-semibold backdrop-blur-sm border border-white/10 transition-all">Únete Ahora</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main class="relative z-10 max-w-7xl mx-auto px-8 pt-20 pb-32 flex flex-col items-center text-center">
+        
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 font-semibold text-sm mb-8">
+            <span class="relative flex h-2 w-2">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-amber-500"></span>
+            </span>
+            SaaS Multi-Restaurante v2.0
+        </div>
+
+        <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 leading-tight max-w-5xl">
+            Gestiona tu restaurante con un sistema <br>
+            <span class="gradient-text">de clase mundial</span>
+        </h1>
+        
+        <p class="text-xl text-slate-400 mb-12 max-w-2xl leading-relaxed">
+            Punto de venta (POS), pantallas de cocina (KDS), facturación y analíticas avanzadas. Todo en una plataforma moderna y ultrarrápida.
+        </p>
+
+        <a href="register.html" class="btn-premium text-lg px-8 py-4 mb-24">
+            Comienza tu prueba gratuita <i data-lucide="arrow-right" class="w-5 h-5"></i>
+        </a>
+
+        <!-- Features Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full text-left">
+            <div class="glass-card">
+                <div class="w-14 h-14 rounded-2xl bg-blue-500/20 text-blue-400 flex items-center justify-center mb-6">
+                    <i data-lucide="monitor-smartphone" class="w-7 h-7"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-3 text-white">POS Multi-dispositivo</h3>
+                <p class="text-slate-400 leading-relaxed">Convierte cualquier iPad o Tablet en un poderoso punto de venta. Toma pedidos directo en la mesa al instante.</p>
+            </div>
+
+            <div class="glass-card">
+                <div class="w-14 h-14 rounded-2xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center mb-6">
+                    <i data-lucide="chef-hat" class="w-7 h-7"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-3 text-white">KDS en Tiempo Real</h3>
+                <p class="text-slate-400 leading-relaxed">Pantallas interactivas para tu cocina. Adiós a los tickets de papel perdidos. Sincronización instantánea vía WebSockets.</p>
+            </div>
+
+            <div class="glass-card">
+                <div class="w-14 h-14 rounded-2xl bg-purple-500/20 text-purple-400 flex items-center justify-center mb-6">
+                    <i data-lucide="bar-chart-3" class="w-7 h-7"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-3 text-white">Analíticas y Control</h3>
+                <p class="text-slate-400 leading-relaxed">Dashboard centralizado para gerentes. Control de caja, reportes de ventas y gestión de stock en un solo lugar.</p>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Pricing (Simplified SaaS version) -->
+    <section class="relative z-10 border-t border-slate-800 bg-slate-900/50 py-24">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-white mb-4">Planes Simples y Transparentes</h2>
+                <p class="text-slate-400 text-lg">Sin comisiones por venta. Un solo pago, herramientas ilimitadas.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Mensual -->
+                <div class="glass-card flex flex-col">
+                    <div class="mb-8">
+                        <h3 class="text-xl font-semibold text-slate-300 mb-2">Plan Mensual</h3>
+                        <div class="flex items-baseline gap-2">
+                            <span class="text-5xl font-black text-white">$150.000</span>
+                            <span class="text-slate-500 font-medium">COP / mes</span>
+                        </div>
+                    </div>
+                    <ul class="space-y-4 text-slate-300 mb-12 flex-1">
+                        <li class="flex items-center gap-3"><i data-lucide="check" class="w-5 h-5 text-amber-500"></i> Mesas ilimitadas</li>
+                        <li class="flex items-center gap-3"><i data-lucide="check" class="w-5 h-5 text-amber-500"></i> Personal ilimitado</li>
+                        <li class="flex items-center gap-3"><i data-lucide="check" class="w-5 h-5 text-amber-500"></i> Soporte 24/7</li>
+                    </ul>
+                    <a href="register.html" class="w-full text-center py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-semibold transition-colors">Seleccionar</a>
+                </div>
+
+                <!-- Anual -->
+                <div class="glass-card flex flex-col relative overflow-hidden border-amber-500/50" style="background: rgba(30, 41, 59, 0.9);">
+                    <div class="absolute top-5 right-5 px-3 py-1 bg-amber-500 text-slate-900 text-xs font-bold uppercase tracking-wider rounded-full">
+                        Ahorra 45%
+                    </div>
+                    <div class="mb-8">
+                        <h3 class="text-xl font-semibold text-amber-400 mb-2">Suscripción Anual</h3>
+                        <div class="flex items-baseline gap-2">
+                            <span class="text-5xl font-black text-white">$1'300.000</span>
+                            <span class="text-slate-500 font-medium">COP / año</span>
+                        </div>
+                    </div>
+                    <ul class="space-y-4 text-slate-300 mb-12 flex-1">
+                        <li class="flex items-center gap-3"><i data-lucide="check" class="w-5 h-5 text-amber-500"></i> Todo lo del plan mensual</li>
+                        <li class="flex items-center gap-3"><i data-lucide="check" class="w-5 h-5 text-amber-500"></i> Onboarding personalizado</li>
+                        <li class="flex items-center gap-3"><i data-lucide="check" class="w-5 h-5 text-amber-500"></i> Integraciones API (Próximamente)</li>
+                    </ul>
+                    <a href="register.html" class="w-full text-center py-3 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-900 font-bold transition-colors shadow-lg shadow-amber-500/20">Obtener Ahora</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="border-t border-slate-800 py-8 text-center text-slate-500 text-sm relative z-10">
+        <p>&copy; 2026 La Mesa Dorada SaaS. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
