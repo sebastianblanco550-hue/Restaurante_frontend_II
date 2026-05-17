@@ -1,6 +1,6 @@
 // --- CONFIGURACIÓN DE DESPLIEGUE ---
 // Cambia esto por tu URL de Render cuando subas el backend (Ej: "https://mi-api-restaurante.onrender.com")
-const BACKEND_DOMAIN = "localhost:8000"; 
+const BACKEND_DOMAIN = "sistema-restaurante-ii.onrender.com"; 
 const PROTOCOL_HTTP = (window.location.hostname === "localhost" || window.location.protocol === "file:") ? "http://" : "https://";
 const PROTOCOL_WS = (window.location.hostname === "localhost" || window.location.protocol === "file:") ? "ws://" : "wss://";
 
